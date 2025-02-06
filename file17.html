@@ -24,3 +24,51 @@
     <div id = "data"></div>
 </body>
 </html>
+#modified Temp:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let users = [];
+      function showUser()
+      {
+        let len = users.length;
+        let str = "";
+        for (let i = 0; i < len; i++) {
+          str += `<div>${users[i].name}- ${users[i].email}- ${users[i].password}- ${users[i].dob}</div>`;
+                
+        }
+        //data.innerHTML = `${name},${email},${password},${dob}`;
+        data.innerHTML = str;
+      
+      }
+
+      function addUser() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("DOB").value;
+        let user = {
+          name: name,
+          email: email,
+          password: password,
+          dob: dob,
+        };
+        users.push(user);
+        showUser();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>New User Signup Form</h1>
+    <input type="text" id="name" placeholder="Name" /><br /><br />
+    <input type="text" id="email" placeholder="Email Id" /><br /><br />
+    <input type="password" id="password" placeholder="Password" /><br /><br />
+    <input type="date" id="DOB" placeholder="Enter Dob" /><br /><br />
+    <button onclick="addUser()">Register</button>
+    <div id="data"></div>
+  </body>
+</html>
