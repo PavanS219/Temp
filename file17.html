@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let dob = document.getElementById("DOB").value
+            data.innerHTML = `${name},${email},${password},${dob}`
+        }
+    </script>
+</head>
+<body>
+    <h1>New User Sighnup Form</h1>
+    <input type = "text" id = "name" placeholder="Name"><br><br>
+    <input type = "text" id = "email" placeholder="Email Id"><br><br>
+    <input type = "password" id = "password" placeholder="Password"><br><br>
+    <input type = "date" id = "DOB" placeholder="Enter Dob"><br><br>
+    <button onclick = "show()">Register</button>
+    <div id = "data"></div>
+</body>
+</html>

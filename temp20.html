@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            let n = document.getElementById("name").value;
+            let data = document.getElementById("data");
+            let table = "<table border='1'>";
+            for(let i = 1; i <= 10; i++) {
+                table += `<tr><td>${n} x ${i} = ${n * i}</tr></td>`;
+            }
+            table += "</table>";
+            data.innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter Number"><br><br>
+    <button onclick="show()">Submit</button>
+    <div id="data"></div>
+</body>
+</html>
